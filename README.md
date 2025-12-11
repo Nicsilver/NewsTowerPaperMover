@@ -18,7 +18,26 @@ A simple automation script to help move paper stacks to the Printer Input Module
 2. **Double-click** the .exe file to run
 3. Done! No Python installation needed!
 
-### For Developers (or other platforms)
+### Linux / macOS
+
+1. **Download** this repository:
+```bash
+git clone https://github.com/Nicsilver/NewsTowerPaperMover.git
+cd NewsTowerPaperMover
+```
+
+2. **Run the script** (it will auto-install dependencies):
+```bash
+chmod +x run.sh
+./run.sh
+```
+
+**Note**: On Linux, the keyboard library may require root permissions:
+```bash
+sudo python3 simple_drag.py
+```
+
+### For Developers (Manual Installation)
 
 1. Make sure you have Python 3.7+ installed
 
@@ -81,10 +100,10 @@ python simple_drag.py
 
 ## Requirements
 
-- Python 3.7+
-- Windows (tested on Windows 10/11)
+- **Windows**: Download the .exe - no other requirements!
+- **Linux/macOS**: Python 3.7+ and dependencies (auto-installed by run.sh)
 - News Tower game
-- Dependencies: pyautogui, keyboard
+- Dependencies: pyautogui, keyboard (only for non-Windows)
 
 ## Troubleshooting
 
@@ -99,6 +118,11 @@ python simple_drag.py
 **Mouse moves but doesn't drag:**
 - Ensure you're pressing F1 while hovering directly over a paper box
 - The script needs the mouse to be over a draggable item
+
+**Linux: Permission denied or keyboard not working:**
+- The keyboard library requires root permissions on Linux
+- Run with: `sudo python3 simple_drag.py`
+- Or add your user to the input group: `sudo usermod -a -G input $USER` (requires logout)
 
 ## License
 
