@@ -12,6 +12,15 @@ A simple automation script to help move paper stacks to the Printer Input Module
 
 ## Installation
 
+### Windows (Easy Way)
+
+1. **Download** this repository (click "Code" → "Download ZIP" and extract)
+2. **Double-click `setup.bat`** to install dependencies
+3. **Double-click `run.bat`** to start the script
+4. Done! No command line needed!
+
+### Manual Installation (All Platforms)
+
 1. Make sure you have Python 3.7+ installed
 
 2. Install dependencies:
@@ -19,25 +28,25 @@ A simple automation script to help move paper stacks to the Printer Input Module
 pip install -r requirements.txt
 ```
 
-## Usage
-
-### Quick Start
-
-1. **Run the script:**
+3. Run the script:
 ```bash
 python simple_drag.py
 ```
 
-2. **Set your drop position:**
+## Usage
+
+### Quick Start
+
+1. **Set your drop position:**
    - Hover your mouse over the **Printer Input Module** (where you want papers to go)
    - Press **F2** to save this position
 
-3. **Drag papers:**
+2. **Drag papers:**
    - Move your mouse over a paper box at the bottom of the screen
    - Press **F1** - the script will grab it, drag it to the saved position, and return your cursor
    - Repeat for each paper box
 
-4. **Exit:**
+3. **Exit:**
    - Press **ESC** to stop the script
 
 ### Controls
