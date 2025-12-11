@@ -65,7 +65,7 @@ python simple_drag.py
    - Repeat for each paper box
 
 3. **Exit:**
-   - Press **ESC** to stop the script
+   - Press **F4** to stop the script
 
 ### Controls
 
@@ -73,7 +73,7 @@ python simple_drag.py
 |-----|--------|
 | **F2** | Save drop position (where papers should go) |
 | **F1** | Pick up item at cursor and drag to saved position |
-| **ESC** | Exit script |
+| **F4** | Exit script |
 
 ### Step-by-Step Workflow
 
