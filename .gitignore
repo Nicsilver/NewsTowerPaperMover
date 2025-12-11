@@ -47,3 +47,8 @@ ENV/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# PyInstaller build files
+build/
+dist/
+*.spec

@@ -12,14 +12,13 @@ A simple automation script to help move paper stacks to the Printer Input Module
 
 ## Installation
 
-### Windows (Easy Way)
+### Windows (Easiest Way - Recommended!)
 
-1. **Download** this repository (click "Code" → "Download ZIP" and extract)
-2. **Double-click `setup.bat`** to install dependencies
-3. **Double-click `run.bat`** to start the script
-4. Done! No command line needed!
+1. **Download** the latest `NewsTowerPaperMover.exe` from [Releases](../../releases)
+2. **Double-click** the .exe file to run
+3. Done! No Python installation needed!
 
-### Manual Installation (All Platforms)
+### For Developers (or other platforms)
 
 1. Make sure you have Python 3.7+ installed
 
