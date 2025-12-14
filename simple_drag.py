@@ -37,8 +37,8 @@ def drag_to_saved_position():
     # Press mouse button down (grab)
     pyautogui.mouseDown()
 
-    # Drag to drop position - slightly slower so game registers it
-    pyautogui.moveTo(drop_position[0], drop_position[1], duration=0.2)
+    # Drag to drop position - instant
+    pyautogui.moveTo(drop_position[0], drop_position[1])
 
     # Release mouse button (drop)
     pyautogui.mouseUp()
