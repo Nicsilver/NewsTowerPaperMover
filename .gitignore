@@ -52,3 +52,6 @@ desktop.ini
 build/
 dist/
 *.spec
+
+# Local documentation (not for public repo)
+CLAUDE.md
