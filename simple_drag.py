@@ -2,6 +2,7 @@
 Simple Paper Drag Automation
 F2 = Save drop position (where to drag TO)
 F1 = Pick up item and drag to saved position
+F3 = Click current position, then click F2 position, then return
 F4 = Exit
 """
 
@@ -50,6 +51,30 @@ def drag_to_saved_position():
 
     print(f"Returned to: {pickup_position}\n")
 
+def click_and_move():
+    """F3 - Click current position, then click F2 position, then return"""
+    global drop_position
+
+    if drop_position is None:
+        print("ERROR: No drop position saved! Press F2 first to set drop location.")
+        return
+
+    # Save current position
+    start_position = pyautogui.position()
+    print(f"Clicking at: {start_position}")
+
+    # Click at current position
+    pyautogui.click()
+
+    # Move to drop position and click
+    pyautogui.moveTo(drop_position[0], drop_position[1])
+    print(f"Clicking at: {drop_position}")
+    pyautogui.click()
+
+    # Move back to start position
+    pyautogui.moveTo(start_position[0], start_position[1])
+    print(f"Returned to: {start_position}\n")
+
 def main():
     print("=" * 50)
     print("  Simple Paper Drag Automation")
@@ -57,12 +82,14 @@ def main():
     print("\nControls:")
     print("  F2  - Save drop position (hover over printer, press F2)")
     print("  F1  - Drag from current position to saved position")
+    print("  F3  - Click here, click F2 position, return")
     print("  F4  - Exit script")
     print("\nInstructions:")
     print("1. Hover your mouse over the Printer Input Module")
     print("2. Press F2 to save that position")
     print("3. Move mouse over a paper box")
     print("4. Press F1 to drag it to the saved position")
+    print("   OR press F3 to click here, click F2 position, and return")
     print("5. Repeat step 3-4 for each paper box")
     print("\nScript is running... waiting for hotkeys")
     print("=" * 50)
@@ -70,6 +97,7 @@ def main():
     # Set up hotkeys
     keyboard.add_hotkey('f2', save_drop_position)
     keyboard.add_hotkey('f1', drag_to_saved_position)
+    keyboard.add_hotkey('f3', click_and_move)
 
     # Wait for F4 to exit
     keyboard.wait('f4')

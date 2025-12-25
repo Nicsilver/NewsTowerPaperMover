@@ -4,10 +4,11 @@ A simple automation script to help move paper stacks to the Printer Input Module
 
 ## Features
 
-- Simple hotkey-based drag automation
+- Simple hotkey-based automation
+- Two modes: Drag & drop (F1) or Click-move-click (F3)
 - No complex computer vision - just works!
-- Save drop position once, drag multiple papers quickly
-- Instant return to pickup position for rapid consecutive drags
+- Save drop position once, process multiple items quickly
+- Instant return to pickup position for rapid consecutive operations
 - Emergency stop with FAILSAFE
 
 ## Installation
@@ -73,10 +74,12 @@ python simple_drag.py
 |-----|--------|
 | **F2** | Save drop position (where papers should go) |
 | **F1** | Pick up item at cursor and drag to saved position |
+| **F3** | Click at cursor, move to F2 position and click, then return |
 | **F4** | Exit script |
 
 ### Step-by-Step Workflow
 
+**Using F1 (Drag & Drop):**
 1. Start the script
 2. In the game, hover over the Printer Input Module drop zone
 3. Press F2 (you'll see "Drop position saved" in console)
@@ -85,6 +88,12 @@ python simple_drag.py
 6. Move to next paper box
 7. Press F1 again
 8. Repeat until all papers are moved!
+
+**Using F3 (Click-Move-Click):**
+1. Save drop position with F2 as above
+2. Move cursor over a paper box
+3. Press F3 - clicks current position, moves to F2 and clicks, then returns
+4. Useful if drag & drop doesn't work in your game
 
 ## Safety Features
 
